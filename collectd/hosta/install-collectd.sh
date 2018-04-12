@@ -2,7 +2,7 @@
 set +x
 set +e
 
-# Listing 5.3.1 
+# Listing 5.3.1
 sudo sudo add-apt-repository ppa:collectd/collectd-5.5
 
 sudo apt-get update
