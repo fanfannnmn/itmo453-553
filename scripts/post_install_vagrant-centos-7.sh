@@ -16,7 +16,12 @@ sudo yum install -y epel-release # https://wiki.centos.org/AdditionalResources/R
 
 # Install base dependencies -  Centos 7 mininal needs the EPEL repo in the line above and the package daemonize
 sudo yum update -y
-sudo yum install -y wget git gcc
+sudo yum install -y wget git yum-utils device-mapper-persistent-data lvm2 httpd gcc gcc-c++ bind-utils python3 ansible -y
+
+# Install docker
+sudo rpm --import https://download-stage.docker.com/linux/centos/gpg
+sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+sudo yum install -y docker-ce
 
 # Installing vagrant keys
 wget --no-check-certificate 'https://raw.github.com/mitchellh/vagrant/master/keys/vagrant.pub'
